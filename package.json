@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/michalwachowicz/restaurant-page/issues"
   },
-  "homepage": "https://michalwachowicz.github.io/restaurant-page"
+  "homepage": "https://michalwachowicz.github.io/restaurant-page",
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
