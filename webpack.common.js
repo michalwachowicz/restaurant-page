@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -7,12 +9,21 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Sushi Bar | Home",
     }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+    }),
   ],
   module: {
     rules: [
       {
         test: /.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
@@ -20,5 +31,8 @@ module.exports = {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+  },
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
   },
 };
