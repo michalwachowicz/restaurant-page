@@ -1,3 +1,5 @@
+import "../scss/style.scss";
+
 const content = document.createElement("div");
 content.id = "content";
 
