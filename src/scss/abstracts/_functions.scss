@@ -1,0 +1,9 @@
+@use "variables" as *;
+
+@function get-color($name) {
+  @return map-get($map: $colors, $key: $name);
+}
+
+@function to-rgba($color, $opacity) {
+  @return rgba($color, $opacity);
+}
