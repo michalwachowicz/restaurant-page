@@ -14,12 +14,12 @@ export default function createHeader() {
     createLogo("dark", "header-logo"),
     createNavigation("header-nav"),
     createButton(
-      createImage(BasketIcon, "Basket/cart icon", 100, 100),
-      "btn btn-icon btn-icon-small"
+      createImage(BasketIcon, "Basket/cart icon", 36, 36),
+      "btn btn-icon btn-icon-s btn-header-basket"
     ),
     createButton(
-      createImage(MenuIcon, "Menu icon", 100, 100),
-      "btn btn-icon btn-icon-small"
+      createImage(MenuIcon, "Menu icon", 36, 36),
+      "btn btn-icon btn-icon-s btn-header-menu"
     )
   );
 
