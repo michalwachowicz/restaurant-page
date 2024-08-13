@@ -15,9 +15,12 @@ export default function createHeader() {
     createNavigation("header-nav"),
     createButton(
       createImage(BasketIcon, "Basket/cart icon", 100, 100),
-      "btn-header"
+      "btn btn-icon btn-icon-small"
     ),
-    createButton(createImage(MenuIcon, "Menu icon", 100, 100), "btn-header")
+    createButton(
+      createImage(MenuIcon, "Menu icon", 100, 100),
+      "btn btn-icon btn-icon-small"
+    )
   );
 
   return header;
