@@ -1,8 +1,8 @@
-export default function createButton(content, className, onClick = null) {
+export default function createButton(content, classList, onClick = null) {
   const button = document.createElement("button");
 
   button.type = "button";
-  button.classList.add(className);
+  button.classList = classList;
 
   if (content instanceof HTMLElement) {
     button.appendChild(content);
