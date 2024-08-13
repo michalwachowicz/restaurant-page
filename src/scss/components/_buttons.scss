@@ -1,0 +1,52 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+$icon-sizes: (
+  "xs": 1.5rem,
+  "s": 2.25rem,
+  "m": 3rem,
+  "l": 4rem,
+);
+
+.btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  @each $name, $size in $icon-sizes {
+    &-icon-#{$name} {
+      width: $size;
+      height: $size;
+    }
+  }
+
+  &-header {
+    &-basket {
+      position: relative;
+      margin-left: auto;
+
+      &::before {
+        content: "1";
+        @include flex-center();
+
+        $size: 1.125rem;
+        $distance: -0.25rem;
+
+        position: absolute;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        bottom: $distance;
+        left: $distance;
+        color: #fff;
+        background-color: get-color("main");
+        font-size: 0.5rem;
+        font-weight: 700;
+      }
+    }
+
+    &-menu {
+      margin-left: 2rem;
+    }
+  }
+}
