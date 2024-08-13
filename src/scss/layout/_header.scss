@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+
+  &-nav {
+    margin-left: auto;
+
+    @media screen and (max-width: $header-media-width) {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      list-style: none;
+      gap: 5rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+
+      &-item {
+        &-link {
+          color: get-color("text");
+          text-decoration: none;
+        }
+
+        &.active {
+          text-decoration: underline;
+          text-decoration-color: get-color("main");
+        }
+      }
+    }
+  }
+}
