@@ -16,8 +16,7 @@ $icon-sizes: (
 
   @each $name, $size in $icon-sizes {
     &-icon-#{$name} {
-      width: $size;
-      height: $size;
+      @include square-size($size);
     }
   }
 
@@ -28,14 +27,14 @@ $icon-sizes: (
 
       &::before {
         content: "1";
-        @include flex-center();
 
         $size: 1.125rem;
         $distance: -0.25rem;
 
+        @include flex-center();
+        @include square-size($size);
+
         position: absolute;
-        width: $size;
-        height: $size;
         border-radius: 50%;
         bottom: $distance;
         left: $distance;
