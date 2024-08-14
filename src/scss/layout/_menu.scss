@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+.menu {
+  @include flex-center();
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: get-color("main");
+
+  @media screen and (min-width: calc($header-media-width + 1px)) {
+    display: none;
+  }
+
+  &-header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    $spacing: 2rem;
+
+    width: calc(100% - $spacing * 2);
+    top: $spacing;
+    left: $spacing;
+  }
+
+  &-nav {
+    &-list {
+      flex-direction: column;
+      text-align: center;
+      font-size: 2.5rem;
+      gap: 3rem;
+
+      &-item {
+        &-link {
+          color: #fff;
+        }
+
+        &.active {
+          text-decoration-color: get-color("text") !important;
+        }
+      }
+    }
+  }
+}
