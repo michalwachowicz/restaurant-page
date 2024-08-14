@@ -4,7 +4,7 @@ import createLogo from "./logo";
 import createNavigation from "./navigation";
 
 import BasketIcon from "../../assets/icons/basket.svg";
-import MenuIcon from "../../assets/icons/menu-dark.svg";
+import MenuIcon from "../../assets/icons/menu.svg";
 import { showMenu } from "./menu";
 
 export default function createHeader() {
