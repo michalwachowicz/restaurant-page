@@ -6,7 +6,7 @@ const pages = [
 
 const createLink = (page, className) => {
   const li = document.createElement("li");
-  li.classList.add(`${className}-list-item`);
+  li.classList = `nav-list-item ${className}-list-item`;
 
   if (page.active) {
     li.classList.add("active");
@@ -15,7 +15,7 @@ const createLink = (page, className) => {
   const a = document.createElement("a");
   a.href = page.link;
   a.textContent = page.name;
-  a.classList.add(`${className}-list-item-link`);
+  a.classList = `nav-list-item-link ${className}-list-item-link`;
 
   li.appendChild(a);
   return li;
@@ -23,10 +23,10 @@ const createLink = (page, className) => {
 
 export default function createNavigation(className) {
   const nav = document.createElement("nav");
-  nav.classList.add(className);
+  nav.classList = `nav ${className}`;
 
   const ul = document.createElement("ul");
-  ul.classList.add(`${className}-list`);
+  ul.classList = `nav-list ${className}-list`;
 
   pages.forEach((page) => {
     const link = createLink(page, className);
