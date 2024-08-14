@@ -5,6 +5,7 @@ import createNavigation from "./navigation";
 
 import BasketIcon from "../../assets/icons/basket.svg";
 import MenuIcon from "../../assets/icons/menu-dark.svg";
+import { showMenu } from "./menu";
 
 export default function createHeader() {
   const header = document.createElement("header");
@@ -19,7 +20,8 @@ export default function createHeader() {
     ),
     createButton(
       createImage(MenuIcon, "Menu icon", 36, 36),
-      "btn btn-icon btn-icon-s btn-header-menu"
+      "btn btn-icon btn-icon-s btn-header-menu",
+      showMenu
     )
   );
 
