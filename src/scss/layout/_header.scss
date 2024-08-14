@@ -14,21 +14,16 @@
     }
 
     &-list {
-      display: flex;
-      list-style: none;
       gap: 5rem;
       font-size: 1.125rem;
-      font-weight: 700;
 
       &-item {
         &-link {
           color: get-color("text");
-          text-decoration: none;
         }
 
         &.active {
-          text-decoration: underline;
-          text-decoration-color: get-color("main");
+          text-decoration-color: get-color("main") !important;
         }
       }
     }

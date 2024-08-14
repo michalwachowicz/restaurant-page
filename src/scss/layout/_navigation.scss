@@ -1,0 +1,17 @@
+.nav {
+  &-list {
+    display: flex;
+    list-style: none;
+    font-weight: 700;
+
+    &-item {
+      &-link {
+        text-decoration: none;
+      }
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
