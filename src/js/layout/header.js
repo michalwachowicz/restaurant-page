@@ -3,7 +3,7 @@ import createImage from "../components/image";
 import createLogo from "../components/logo";
 import createNavigation from "./navigation";
 
-import BasketIcon from "../../assets/icons/basket.svg";
+import BasketIcon from "../../assets/icons/basket-dark.svg";
 import MenuIcon from "../../assets/icons/menu.svg";
 import { showMenu } from "./menu";
 
