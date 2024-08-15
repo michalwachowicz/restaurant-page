@@ -70,7 +70,7 @@ $icon-sizes: (
     &-menu {
       margin-left: 2rem;
 
-      @media screen and (min-width: calc($mobile-width + 1px)) {
+      @include desktop-media {
         display: none;
       }
     }

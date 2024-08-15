@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin flex-center($gap: 0) {
   display: flex;
   align-items: center;
@@ -11,4 +13,16 @@
 @mixin square-size($size) {
   width: $size;
   height: $size;
+}
+
+@mixin mobile-media() {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin desktop-media() {
+  @media screen and (min-width: calc($mobile-width + 1px)) {
+    @content;
+  }
 }

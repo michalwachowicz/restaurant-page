@@ -12,7 +12,7 @@
   height: 100vh;
   background-color: get-color("main");
 
-  @media screen and (min-width: calc($mobile-width + 1px)) {
+  @include desktop-media {
     display: none;
   }
 

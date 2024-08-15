@@ -1,5 +1,6 @@
 @use "../abstracts/functions" as *;
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .main {
   display: flex;
@@ -7,7 +8,7 @@
   gap: 1.5rem;
   align-items: center;
 
-  @media screen and (max-width: $mobile-width) {
+  @include mobile-media {
     flex-direction: column;
     align-items: stretch;
     gap: 2rem;
@@ -30,7 +31,7 @@
   &-img {
     flex: 1 1 480px;
 
-    @media screen and (max-width: $mobile-width) {
+    @include mobile-media {
       flex: 1 1 auto;
     }
 
