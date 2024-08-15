@@ -16,6 +16,22 @@
     color: get-color("text");
     font-size: clamp(2.5rem, 5vw, 3rem);
     font-weight: 700;
+
+    &-highlight {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 110%;
+        height: 50%;
+        top: 0;
+        left: -5%;
+        z-index: -1;
+        background-color: get-color("main");
+      }
+    }
   }
 
   &-description {
