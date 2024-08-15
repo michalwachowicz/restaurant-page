@@ -15,15 +15,15 @@ export default function createCard(
   const info = document.createElement("div");
   info.classList = "card-info";
 
-  const h2 = document.createElement("h2");
-  h2.classList = "card-heading";
-  h2.textContent = heading;
+  const h3 = document.createElement("h3");
+  h3.classList = "card-heading";
+  h3.textContent = heading;
 
   const p = document.createElement("p");
   p.classList = "card-description";
   p.textContent = description;
 
-  info.append(h2, p, elements);
+  info.append(h3, p, elements);
   card.append(imgContainer, info);
 
   return card;
