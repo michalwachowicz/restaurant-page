@@ -40,6 +40,25 @@ $icon-sizes: (
     box-shadow: 0 4px 32px 0 get-color("main-light");
   }
 
+  &-label {
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    font-size: 1.125rem;
+
+    &.active {
+      color: #fff;
+      background-color: get-color("main");
+      font-weight: 500;
+    }
+
+    &:not(.active) {
+      color: get-color("main-dark");
+      background-color: #fff;
+      font-weight: 300;
+      box-shadow: 0 1px 4px 1px to-rgba(get-color("main-dark"), 0.25);
+    }
+  }
+
   &-header {
     &-basket {
       position: relative;
