@@ -1,6 +1,4 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/functions" as *;
-@use "../abstracts/mixins" as *;
+@use "../abstracts" as *;
 
 $icon-sizes: (
   "xs": 1.5rem,
