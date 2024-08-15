@@ -9,7 +9,7 @@
   &-nav {
     margin-left: auto;
 
-    @media screen and (max-width: $header-media-width) {
+    @media screen and (max-width: $mobile-width) {
       display: none;
     }
 
