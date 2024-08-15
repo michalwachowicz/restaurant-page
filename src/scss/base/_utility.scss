@@ -1,3 +1,11 @@
+@use "../abstracts/variables" as *;
+
 .hidden {
   display: none !important;
+}
+
+.block-mobile-scroll {
+  @media screen and (max-width: $mobile-width) {
+    overflow: hidden;
+  }
 }

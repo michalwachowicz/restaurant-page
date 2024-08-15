@@ -14,6 +14,7 @@ const menu = (() => {
 
   const hideMenu = () => {
     menu.classList.add("hidden");
+    document.body.classList.remove("block-mobile-scroll");
   };
 
   header.append(
@@ -31,6 +32,7 @@ const menu = (() => {
 
 const showMenu = () => {
   menu.classList.remove("hidden");
+  document.body.classList.add("block-mobile-scroll");
 };
 
 export { menu, showMenu };
