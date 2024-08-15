@@ -20,6 +20,28 @@ $icon-sizes: (
     }
   }
 
+  &-func {
+    color: #fff;
+    background-color: get-color("main");
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 0.75rem 2.5rem;
+
+    $font-s: 1.125rem;
+
+    &-s {
+      font-size: $font-s;
+    }
+
+    &-l {
+      font-size: clamp($font-s, 5vw, 1.5rem);
+    }
+  }
+
+  &-gradient {
+    box-shadow: 0 4px 32px 0 get-color("main-light");
+  }
+
   &-header {
     &-basket {
       position: relative;
