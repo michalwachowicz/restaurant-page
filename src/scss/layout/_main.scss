@@ -6,7 +6,9 @@
   gap: 1.5rem;
   align-items: center;
 
-  @media screen and (max-width: 500px) {
+  $size-limit: 500px;
+
+  @media screen and (max-width: $size-limit) {
     flex-direction: column;
   }
 
@@ -26,6 +28,10 @@
 
   &-img {
     flex: 1 1 480px;
+
+    @media screen and (max-width: $size-limit) {
+      flex: 1 1 auto;
+    }
 
     > img {
       width: 100%;
