@@ -73,4 +73,15 @@ $icon-sizes: (
       }
     }
   }
+
+  &-add-to-cart {
+    &-container {
+      @include flex-center(1rem);
+    }
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 }
