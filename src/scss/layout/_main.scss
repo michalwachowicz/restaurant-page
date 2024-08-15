@@ -40,6 +40,10 @@
     color: get-color("text-light");
     font-size: 1rem;
     font-weight: 400;
+
+    @include mobile-media {
+      margin-bottom: 2.5rem;
+    }
   }
 
   &-img {
