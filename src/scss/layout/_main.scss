@@ -10,6 +10,7 @@
 
   @media screen and (max-width: $size-limit) {
     flex-direction: column;
+    gap: 2rem;
   }
 
   &-heading {
