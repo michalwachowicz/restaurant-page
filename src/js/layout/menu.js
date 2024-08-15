@@ -1,6 +1,6 @@
-import createButton from "./button";
-import createImage from "./image";
-import createLogo from "./logo";
+import createButton from "../components/button";
+import createImage from "../components/image";
+import createLogo from "../components/logo";
 
 import CloseIcon from "../../assets/icons/close.svg";
 import createNavigation from "./navigation";

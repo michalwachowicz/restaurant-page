@@ -1,5 +1,5 @@
-import createButton from "./button";
-import createImage from "./image";
+import createButton from "../components/button";
+import createImage from "../components/image";
 
 import SushiPlate from "../../assets/img/sushi-plate.png";
 

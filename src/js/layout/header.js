@@ -1,6 +1,6 @@
-import createButton from "./button";
-import createImage from "./image";
-import createLogo from "./logo";
+import createButton from "../components/button";
+import createImage from "../components/image";
+import createLogo from "../components/logo";
 import createNavigation from "./navigation";
 
 import BasketIcon from "../../assets/icons/basket.svg";
