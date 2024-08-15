@@ -65,7 +65,7 @@ export default function createMenuSamplesSection() {
   sushiSamples.forEach((sushi) =>
     cardContainer.appendChild(
       createCard(
-        "menu-section-card",
+        "card-menu",
         sushi.name,
         sushi.description,
         createImage(sushi.src, sushi.alt, 150, 150),
