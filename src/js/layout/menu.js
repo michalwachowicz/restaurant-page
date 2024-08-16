@@ -31,6 +31,8 @@ const menu = (() => {
 })();
 
 const showMenu = () => {
+  scrollTo(0, 0);
+
   menu.classList.remove("hidden");
   document.body.classList.add("block-mobile-scroll");
 };
