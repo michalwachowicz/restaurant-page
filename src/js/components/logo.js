@@ -2,10 +2,10 @@ import createImage from "./image";
 import LogoDark from "../../assets/img/logo-dark.svg";
 import LogoWhite from "../../assets/img/logo-white.svg";
 
-export default function createLogo(color, className) {
+export default function createLogo(color) {
   const a = document.createElement("a");
   a.href = "#";
-  a.classList.add(className);
+  a.classList = "logo";
 
   const img = createImage(
     color == "white" ? LogoWhite : LogoDark,
@@ -13,7 +13,7 @@ export default function createLogo(color, className) {
     60,
     87
   );
-  img.classList.add(`${className}-img`);
+  img.classList.add("logo-img");
 
   a.appendChild(img);
   return a;
