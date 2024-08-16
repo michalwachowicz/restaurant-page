@@ -2,11 +2,12 @@ import createButton from "../components/button";
 import createAddToCartBtn from "../components/add-to-cart-btn";
 import createCard from "../components/card";
 import createSection from "./section";
+import createImage from "../components/image";
 
+import ArrowRight from "../../assets/icons/arrow-right.svg";
 import SalmonUramaki from "../../assets/img/sushi-1.png";
 import TunaUramaki from "../../assets/img/sushi-2.png";
 import SalmonNigiri from "../../assets/img/sushi-3.png";
-import createImage from "../components/image";
 
 const labels = [
   { name: "All Sushi", active: true },
@@ -74,7 +75,10 @@ export default function createMenuSamplesSection() {
     )
   );
 
-  section.append(labelContainer, cardContainer);
+  const viewAllBtn = createButton("View All", "btn btn-view-all");
+  viewAllBtn.appendChild(createImage(ArrowRight, "Right arrow icon", 48, 48));
+
+  section.append(labelContainer, cardContainer, viewAllBtn);
 
   return section;
 }
