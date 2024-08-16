@@ -47,10 +47,12 @@ module.exports = (_, argv) => {
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: "asset/resource",
+          generator: { filename: "fonts/[name][ext]" },
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: "asset/resource",
+          generator: { filename: "images/[name][ext]" },
         },
       ],
     },
