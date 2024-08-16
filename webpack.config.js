@@ -75,6 +75,7 @@ module.exports = (_, argv) => {
               plugins: [
                 ["mozjpeg", { quality: 75 }],
                 ["pngquant", { quality: [0.65, 0.9] }],
+                "svgo",
               ],
             },
           },
