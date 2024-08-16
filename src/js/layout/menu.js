@@ -18,7 +18,7 @@ const menu = (() => {
   };
 
   header.append(
-    createLogo("white"),
+    createLogo("white", true),
     createButton(
       createImage(CloseIcon, "Close icon", 36, 36),
       "btn btn-icon btn-icon-s",
