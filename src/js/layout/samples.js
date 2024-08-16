@@ -5,9 +5,9 @@ import createSection from "./section";
 import createImage from "../components/image";
 
 import ArrowRight from "../../assets/icons/arrow-right.svg";
-import SalmonUramaki from "../../assets/img/sushi-1.png";
-import TunaUramaki from "../../assets/img/sushi-2.png";
-import SalmonNigiri from "../../assets/img/sushi-3.png";
+import SalmonUramaki from "../../assets/img/sushi-1.png?as=webp";
+import TunaUramaki from "../../assets/img/sushi-2.png?as=webp";
+import SalmonNigiri from "../../assets/img/sushi-3.png?as=webp";
 
 const labels = [
   { name: "All Sushi", active: true },

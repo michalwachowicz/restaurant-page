@@ -2,7 +2,7 @@ import createCard from "../components/card";
 import createImage from "../components/image";
 import createButton from "../components/button";
 
-import NewsletterImg from "../../assets/img/newsletter.png";
+import NewsletterImg from "../../assets/img/newsletter.png?as=webp";
 
 export default function createNewsletterSection() {
   return createCard(

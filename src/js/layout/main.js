@@ -1,7 +1,7 @@
 import createButton from "../components/button";
 import createImage from "../components/image";
 
-import SushiPlate from "../../assets/img/sushi-plate.png";
+import SushiPlate from "../../assets/img/sushi-plate.png?as=webp";
 
 export default function createMain() {
   const main = document.createElement("section");

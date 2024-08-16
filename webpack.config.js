@@ -3,6 +3,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (_, argv) => {
   // Set default mode to development
@@ -61,7 +63,33 @@ module.exports = (_, argv) => {
       static: "./dist",
     },
     optimization: {
-      minimizer: [new CssMinimizerPlugin()],
+      minimize: true,
+      minimizer: [
+        new CssMinimizerPlugin(),
+        new TerserPlugin({ test: /\.js(\?.*)?$/i }),
+        new ImageMinimizerPlugin({
+          deleteOriginalAssets: true,
+          minimizer: {
+            implementation: ImageMinimizerPlugin.imageminMinify,
+            options: {
+              plugins: [
+                ["mozjpeg", { quality: 75 }],
+                ["pngquant", { quality: [0.65, 0.9] }],
+              ],
+            },
+          },
+          generator: [
+            {
+              preset: "webp",
+              implementation: ImageMinimizerPlugin.imageminGenerate,
+              options: {
+                plugins: ["imagemin-webp"],
+              },
+              filename: "[name].webp",
+            },
+          ],
+        }),
+      ],
     },
   };
 };
