@@ -52,4 +52,32 @@
       }
     }
   }
+
+  &-newsletter {
+    @include mobile-media {
+      flex-direction: column;
+    }
+
+    .card-img-container {
+      align-self: stretch;
+
+      img {
+        border-radius: 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .card-info {
+      align-self: center;
+      padding: 3rem;
+      text-align: left;
+    }
+
+    > * {
+      flex: 1;
+      height: auto;
+    }
+  }
 }
