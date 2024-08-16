@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+.footer {
+  padding: 2rem;
+  background-color: get-color("main-light");
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile-media {
+      gap: 4rem;
+      flex-direction: column;
+    }
+  }
+
+  &-copyright {
+    color: get-color("text-light");
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 3rem;
+
+    @include mobile-media {
+      font-size: 0.875rem;
+      margin-top: 4rem;
+    }
+  }
+
+  &-nav {
+    &-list {
+      gap: 2.25rem;
+
+      @include mobile-media {
+        flex-direction: column;
+      }
+
+      &-item {
+        font-size: 1.125rem;
+
+        &-link {
+          color: get-color("text");
+        }
+
+        &.active {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
