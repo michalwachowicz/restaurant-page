@@ -9,6 +9,7 @@
   width: 100vw;
   height: 100vh;
   background-color: get-color("main");
+  z-index: 1000;
 
   @include desktop-media {
     display: none;
