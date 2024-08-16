@@ -1,0 +1,26 @@
+.menu-section {
+  &-label-container {
+    display: flex;
+    gap: 2rem;
+    width: min(800px, 100%);
+    margin: 3rem auto 0;
+    padding: 0.5rem 0;
+    overflow: scroll;
+
+    > * {
+      flex: 0 0 auto;
+    }
+  }
+
+  &-card-container {
+    display: flex;
+    gap: 3.5rem;
+    overflow: scroll;
+    margin-top: 3rem;
+    padding: 1rem;
+
+    > * {
+      flex: 0 0 300px;
+    }
+  }
+}
