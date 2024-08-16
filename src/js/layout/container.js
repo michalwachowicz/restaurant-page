@@ -1,3 +1,4 @@
+import createContactSection from "./contact";
 import createHeader from "./header";
 import createMain from "./main";
 import createNewsletterSection from "./newsletter";
@@ -11,7 +12,8 @@ export default function createContainer() {
     createHeader(),
     createMain(),
     createMenuSamplesSection(),
-    createNewsletterSection()
+    createNewsletterSection(),
+    createContactSection()
   );
 
   return container;
