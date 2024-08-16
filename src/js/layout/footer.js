@@ -10,7 +10,7 @@ export default function createFooter() {
 
   const wrapper = document.createElement("div");
   wrapper.classList = "footer-wrapper";
-  wrapper.append(createLogo("dark"), createNavigation("footer-nav"));
+  wrapper.append(createLogo("dark", true), createNavigation("footer-nav"));
 
   const copyright = document.createElement("div");
   copyright.classList = "footer-copyright";

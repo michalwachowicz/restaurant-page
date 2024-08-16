@@ -2,7 +2,7 @@ import createImage from "./image";
 import LogoDark from "../../assets/img/logo-dark.svg";
 import LogoWhite from "../../assets/img/logo-white.svg";
 
-export default function createLogo(color) {
+export default function createLogo(color, lazy = false) {
   const a = document.createElement("a");
   a.href = "#";
   a.classList = "logo";
@@ -11,7 +11,8 @@ export default function createLogo(color) {
     color == "white" ? LogoWhite : LogoDark,
     "The sushi bar logo",
     60,
-    87
+    87,
+    lazy
   );
   img.classList.add("logo-img");
 

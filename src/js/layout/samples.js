@@ -69,7 +69,7 @@ export default function createMenuSamplesSection() {
         "card-menu",
         sushi.name,
         sushi.description,
-        createImage(sushi.src, sushi.alt, 150, 150),
+        createImage(sushi.src, sushi.alt, 150, 150, true),
         createAddToCartBtn()
       )
     )
