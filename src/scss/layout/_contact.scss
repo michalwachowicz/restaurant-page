@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.contact {
+  &-container {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+
+    @include mobile-media {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  &-info {
+    margin-top: 2rem;
+    text-align: left;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &-heading {
+      color: get-color("text");
+      font-size: 1.5rem;
+    }
+
+    &-content {
+      color: get-color("text-light");
+      font-size: 1.125rem;
+    }
+  }
+
+  &-map {
+    border: none;
+
+    @include mobile-media {
+      flex: 1 1 320px;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+}
