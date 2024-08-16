@@ -24,7 +24,7 @@ export default function createContactSection() {
   section.classList.add("contact");
 
   const container = document.createElement("div");
-  container.classList = "contant-container";
+  container.classList = "contact-container";
 
   const info = document.createElement("div");
   info.classList = "contact-info-section";
